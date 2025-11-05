@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU WEB JUAL BELI</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1, h2, h5 {
+        text-align: center;
+        color: #333;
+    }
+
+    .produk {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 40px;
+    }
+
+    .item {
+        background-color: aqua;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 10px;
+        width: 250px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .item h3 {
+        margin: 10px 0 5px 0;
+    }
+
+    .item p {
+        margin: 5px 0;
+    }
+
+    .form-pesan {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        margin: 0 auto 50px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+
+    /* ✅ RESPONSIVE: 2 kolom per baris di HP */
+    @media (max-width: 768px) {
+        .item {
+            width: 48%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .item {
+            width: 48%;
+        }
+    }
+</style>
+</head>
+<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Amel.html">BERANDA</a>
+          </li>
+               <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Aku.html">TUTORIAL</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <h1>A-A-N OLSHOP</h1>
+    <h5>Ayo Ramaikan Toko Kami Dengan Produk/Barang Yang Kami Jual Di Bawah Ini!!</h5>
+
+    <h2>PILIHAN PRODUK/BARANG UNTUK LAKI-LAKI ↓</h2>
+    <div class="produk">
+        <div class="item"><img src="Yaudah.jpg" alt="Produk 1"><h3>Produk 1</h3><p>Harga: Rp 100.000</p><p>Deskripsi: Produk Yang berkualitas tinggi.</p></div>
+        <div class="item"><img src="Paret.jpg" alt="Produk 2"><h3>Produk 2</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang sangat populer.</p></div>
+        <div class="item"><img src="Ini.jpg" alt="Produk 3"><h3>Produk 3</h3><p>Harga: Rp 120.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="Paok.jpg" alt="Produk 4"><h3>Produk 4</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="Kamu.jpg" alt="Produk 5"><h3>Produk 5</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="Foto.jpg" alt="Produk 6"><h3>Produk 6</h3><p>Harga: Rp 80.000</p><p>Deskripsi: Produk Jam Yang Berkualitas.</p></div>
+        <div class="item"><img src="Mana.jpg" alt="Produk 7"><h3>Produk 7</h3><p>Harga: Rp 100.000</p><p>Deskripsi: Produk Yang sangat populer.</p></div>
+        <div class="item"><img src="Iya.jpg" alt="Produk 8"><h3>Produk 8</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="Ga.jpg" alt="Produk 9"><h3>Produk 9</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="1.jpg" alt="Produk 10"><h3>Produk 10</h3><p>Harga: Rp 150.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+    </div>
+
+    <h2>PILIHAN PRODUK/BARANG UNTUK PEREMPUAN ↓</h2>
+    <div class="produk">
+        <div class="item"><img src="L1.jpg" alt="Produk 11"><h3>Produk 11</h3><p>Harga: Rp 90.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L2.jpg" alt="Produk 12"><h3>Produk 12</h3><p>Harga: Rp 80.000</p><p>Deskripsi: Produk Yang berkualitas tinggi.</p></div>
+        <div class="item"><img src="L3.jpg" alt="Produk 13"><h3>Produk 13</h3><p>Harga: Rp 80.000</p><p>Deskripsi: Produk Yang sangat populer.</p></div>
+        <div class="item"><img src="L4.jpg" alt="Produk 14"><h3>Produk 14</h3><p>Harga: Rp 100.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L5.jpg" alt="Produk 15"><h3>Produk 15</h3><p>Harga: Rp 70.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L6.jpg" alt="Produk 16"><h3>Produk 16</h3><p>Harga: Rp 90.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L7.jpg" alt="Produk 17"><h3>Produk 17</h3><p>Harga: Rp 70.000</p><p>Deskripsi: Produk Yang sangat populer.</p></div>
+        <div class="item"><img src="L8.jpg" alt="Produk 18"><h3>Produk 18</h3><p>Harga: Rp 85.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L9.jpg" alt="Produk 19"><h3>Produk 19</h3><p>Harga: Rp 90.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="L10.jpg" alt="Produk 20"><h3>Produk 20</h3><p>Harga: Rp 50.000</p><p>Deskripsi: Produk Yang pilihan terbaik.</p></div>
+    </div>
+
+    <h2>DAN INI AKSESORIS NYA ↓</h2>
+    <div class="produk">
+        <div class="item"><img src="K1.webp" alt="Kalung"><h3>KALUNG PEREMPUAN & LAKI-LAKI</h3><p>Harga: Rp 20.000 & Rp 15.000</p><p>Deskripsi: Kalung Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="Z1.webp" alt="Gelang"><h3>GELANG PEREMPUAN & LAKI-LAKI</h3><p>Harga: Rp 20.000 & Rp 10.000</p><p>Deskripsi: Gelang Yang sangat bagus.</p></div>
+        <div class="item"><img src="K2.webp" alt="Cincin"><h3>CINCIN PEREMPUAN & LAKI-LAKI</h3><p>Harga: Rp 30.000 & Rp 15.000</p><p>Deskripsi: Cincin Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="K3.webp" alt="Kacamata"><h3>KACA MATA PEREMPUAN & LAKI-LAKI</h3><p>Harga: Rp 35.000 & Rp 30.000</p><p>Deskripsi: Kaca Mata Yang pilihan terbaik.</p></div>
+        <div class="item"><img src="K4.webp" alt="Jam"><h3>JAM TANGAN PEREMPUAN & LAKI-LAKI</h3><p>Harga: Rp 85.000 & Rp 90.000</p><p>Deskripsi: Jam Tangan Yang pilihan terbaik.</p></div>
+    </div>
+
+    <div class="form-pesan">
+        <h2>Formulir Pemesanan</h2>
+        <form id="formPemesanan">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="produk">Pilih Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="">-- Pilih Produk --</option>
+                <option value="Produk 1">Produk 1 - Rp 100.000</option>
+                <option value="Produk 2">Produk 2 - Rp 150.000</option>
+                <option value="Produk 3">Produk 3 - Rp 120.000</option>
+                <option value="Produk 4">Produk 4 - Rp 150.000</option>
+                <option value="Produk 5">Produk 5 - Rp 150.000</option>
+            </select>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+
+            <button type="submit">Pesan via WhatsApp</button>
+        </form>
+    </div>
+
+</body>
+</html>

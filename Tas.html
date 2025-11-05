@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-A-N OLSHOP Marketplace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.02);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 10px;
+    }
+
+    .product-details h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .product-details p {
+      margin: 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .modal-content h2 {
+      margin: 10px 0;
+    }
+
+    .modal-content p {
+      margin: 5px 0;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>A-A-N OLSHOP Marketplace</h1>
+    <p>Pilihan Produk Terbaik Untuk Anda!</p>
+  </header>
+
+  <div class="container">
+    <!-- Produk 1 -->
+    <div class="product" onclick="openModal(
+      'Tas Jansport',
+      'Rp 100.000',
+      'Tas berkualitas tinggi dan tahan lama, cocok untuk sekolah dan traveling.',
+      'https://via.placeholder.com/400x250?text=Tas+Jansport',
+      'https://wa.me/6281234567890'
+    )">
+      <img src="https://via.placeholder.com/400x250?text=Tas+Jansport" alt="Tas Jansport">
+      <div class="product-details">
+        <h3>Tas Jansport</h3>
+        <p>Rp 100.000</p>
+      </div>
+    </div>
+
+    <!-- Produk 2 -->
+    <div class="product" onclick="openModal(
+      'Sepatu Sneakers',
+      'Rp 150.000',
+      'Sneakers nyaman dipakai sehari-hari dengan desain trendi.',
+      'https://via.placeholder.com/400x250?text=Sepatu+Sneakers',
+      'https://wa.me/6281234567890'
+    )">
+      <img src="https://via.placeholder.com/400x250?text=Sepatu+Sneakers" alt="Sepatu Sneakers">
+      <div class="product-details">
+        <h3>Sepatu Sneakers</h3>
+        <p>Rp 150.000</p>
+      </div>
+    </div>
+
+    <!-- Produk tambahan bisa ditambahkan di sini dengan format yang sama -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Produk">
+      <h2 id="modalTitle"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalDescription"></p>
+      <a id="whatsappLink" class="whatsapp-btn" target="_blank">Hubungi via WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, price, description, image, waLink) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalDescription').innerText = description;
+      document.getElementById('modalImage').src = image;
+      document.getElementById('whatsappLink').href = waLink;
+      document.getElementById('productModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('productModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('productModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
